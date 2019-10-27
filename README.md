@@ -1,16 +1,18 @@
 
-# FullCalendar Webpack Example
+# FullCalendar Webpack template
 
-This is a fully-buildable example project for FullCalendar and [Webpack].
-
+This is a fully-buildable project for FullCalendar and [Webpack].
 
 ## Installation
 
 ```bash
-git clone https://github.com/fullcalendar/fullcalendar-example-projects.git
-cd fullcalendar-example-projects/webpack
+git clone https://github.com/daniel-sudz/etabeta.git
+cd etabeta
 npm install
+npm run build
 ```
+## Testing 
+You may need to enable CORS or cross origin requests in order to test the calender without a server running. To do this in chrome you can install an extension called Allow CORS: Access-Control-Allow-Origin. Do not leave this extension turned on as this is a security vulnerability. 
 
 ## Build Commands
 
