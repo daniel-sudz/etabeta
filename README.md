@@ -9,6 +9,8 @@ NPM is a package manager for installing libraries such as webpack and fullcalend
 
 Fullcalendar is js library that creates a pretty calendar view. It is nice as it allows data to be pulled from google calendar, which means that code does not need to be updated to update the events displayed in the calendar. 
 
+Bootsrap is a popular css library created by Twitter for rapid devolopment of websites. They feature a nice set of docs that you can use to find a component that you want to add. Example link: https://getbootstrap.com/docs/4.3/components/navbar/. Bootsrap is automatically linked to any html file added to the source folder.  
+
 
 ## Installation
 
@@ -26,6 +28,11 @@ On my computer, chrome does not block the requests but edge does. To check if CO
 
 ```bash
 npm run build
+```
+## Continuous build 
+Webpack has a continuous build function called watch which will look for any changes in the source files and automatically rebuild the code. Use this while editing the html files to not have to manually rebuild 
+```bash
+npm run watch 
 ```
 
 ## How to commit changes 
