@@ -5,6 +5,7 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 const glob = require('glob')
 const path = require('path')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = { 
   //target: 'node', // in order to ignore built-in modules like path, fs, etc. 
@@ -42,7 +43,10 @@ module.exports = {
   plugins: [
     new CompressionPlugin(),
     //new HtmlWebpackPlugin(), // Generates default index.html
-	new HtmlWebpackPlugin(),
+	new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: 'index.html',
+      template: './src/index.html'
+    }),
     new HtmlWebpackPlugin({  // Also generate a test.html
       filename: 'calendar.html',
       template: './src/calendar.html'
@@ -54,6 +58,17 @@ module.exports = {
     new PurgecssPlugin({
       paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`,  { nodir: true }),
     }),
+	
+	new UglifyJsPlugin({
+        test: /\.js$/,
+        sourceMap: false,
+        uglifyOptions: {
+			dead_code: true,
+            compress: {},
+            mangle: true,
+        }
+	}),
+	
 	//new BundleAnalyzerPlugin(),
   ]
 };
