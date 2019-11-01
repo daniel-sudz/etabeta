@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack -p",
     "watch": "webpack --watch",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+	"test": "webpack -p"
   },
   "dependencies": {
     "@babel/preset-env": "^7.6.3",
