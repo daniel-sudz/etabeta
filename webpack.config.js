@@ -50,6 +50,14 @@ module.exports = {
       filename: 'calendar.html',
       template: './src/calendar.html'
     }),
+	new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: 'history.html',
+      template: './src/history.html'
+    }),
+  new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: 'donations.html',
+      template: './src/donations.html'
+    }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
