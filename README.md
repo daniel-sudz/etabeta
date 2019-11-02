@@ -34,9 +34,9 @@ If you want to test the complete resulting website, you can host it locally with
 firebase serve 
 ```
 ## Deploying the website 
-Upon pushing to the master, travis ci will pick up changes and rebuild the entire project. The resulting build files will automatically get deployed to firebase and served from there on the registered domain. 
+Upon pushing to the master, travis ci will pick up changes and rebuild the entire project. The resulting build files will automatically get deployed to firebase and served from there on the registered domain. Due to this, it is not necessary to manually deploy the website.
 
-Due to this, it is not necessary to manually deploy the website. 
+At the top of this readme you may have seen a [![Build Status](https://travis-ci.com/daniel-sudz/etabeta.svg?branch=master)](https://travis-ci.com/daniel-sudz/etabeta) sticker. If this sticker says build|failing, this means your build has failed and you should check the build logs. Simply click on the sticker to view the build history. 
 
 ## How to commit changes 
 ```bash
