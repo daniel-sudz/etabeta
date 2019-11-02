@@ -1,5 +1,5 @@
-
-# FullCalendar Webpack template
+# Eta Beta Website Design
+[![Build Status](https://travis-ci.com/daniel-sudz/etabeta.svg?branch=master)](https://travis-ci.com/daniel-sudz/etabeta)
 
 This is a project that includes FullCalendar and [Webpack]. 
 
@@ -19,21 +19,24 @@ git clone https://github.com/daniel-sudz/etabeta.git
 cd etabeta
 npm install
 ```
-## Testing 
-You may need to enable CORS or cross origin requests in order to test the calender without a server running. To do this in chrome you can install an extension called Allow CORS: Access-Control-Allow-Origin. Do not leave this extension turned on as this is a security vulnerability. 
-
-On my computer, chrome does not block the requests but edge does. To check if CORS are being blocked, you can look at your browsers developer console. 
-
 ## Build Commands
 
 ```bash
 npm run build
 ```
-## Continuous build 
+## Testing/Continuous build 
 Webpack has a continuous build function called watch which will look for any changes in the source files and automatically rebuild the code. Use this while editing the html files to not have to manually rebuild 
 ```bash
 npm run watch 
 ```
+If you want to test the complete resulting website, you can host it locally with 
+```bash
+firebase serve 
+```
+## Deploying the website 
+Upon pushing to the master, travis ci will pick up changes and rebuild the entire project. The resulting build files will automatically get deployed to firebase and served from there on the registered domain. 
+
+Due to this, it is not necessary to manually deploy the website. 
 
 ## How to commit changes 
 ```bash
