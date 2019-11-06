@@ -6,7 +6,7 @@
     "build": "webpack -p",
     "watch": "webpack --watch",
     "clean": "rm -rf dist",
-	"test": "webpack -p"
+    "test": "webpack -p"
   },
   "dependencies": {
     "@babel/preset-env": "^7.6.3",
