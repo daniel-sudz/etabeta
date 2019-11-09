@@ -9,6 +9,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 
+const page_header = require('./src/resources/resources.js');
+
 module.exports = {
     //target: 'node', // in order to ignore built-in modules like path, fs, etc. 
     //externals: [nodeExternals()], // in order to ignore all modules in node_modules folder 
@@ -26,8 +28,6 @@ module.exports = {
                 test: /\.svg$/,
                 loader: 'file-loader'
             },
-            // javascript = babel + uglify
-
 
             // css file: extract to css file with mini extract plugin
             {
@@ -44,27 +44,34 @@ module.exports = {
         //new HtmlWebpackPlugin(), // Generates default index.html
         new HtmlWebpackPlugin({ // Also generate a test.html
             filename: 'index.html',
-            template: './src/index.html'
+            template: './src/index.html',
+            page_header: page_header.header
+
         }),
         new HtmlWebpackPlugin({ // Also generate a test.html
             filename: 'calendar.html',
-            template: './src/calendar.html'
+            template: './src/calendar.html',
+            page_header: page_header.header
         }),
         new HtmlWebpackPlugin({ // Also generate a test.html
             filename: 'funding.html',
-            template: './src/funding.html'
+            template: './src/funding.html',
+            page_header: page_header.header
         }),
         new HtmlWebpackPlugin({ // Also generate a test.html
             filename: 'scholarships.html',
-            template: './src/scholarships.html'
+            template: './src/scholarships.html',
+            page_header: page_header.header
         }),
         new HtmlWebpackPlugin({ // Also generate a test.html
             filename: 'history.html',
-            template: './src/history.html'
+            template: './src/history.html',
+            page_header: page_header.header
         }),
         new HtmlWebpackPlugin({ // Also generate a test.html
             filename: 'donations.html',
-            template: './src/donations.html'
+            template: './src/donations.html',
+            page_header: page_header.header
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
