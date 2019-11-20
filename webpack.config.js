@@ -73,6 +73,11 @@ module.exports = {
             template: './src/donations.html',
             page_header: page_header.header
         }),
+        new HtmlWebpackPlugin({ // Also generate a test.html
+            filename: 'book_reviews.html',
+            template: './src/book_reviews.html',
+            page_header: page_header.header
+        }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"
