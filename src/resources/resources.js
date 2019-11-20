@@ -17,7 +17,7 @@ module.exports = {
                         <a class="nav-link" href="./donations.html#">Donations</a> 
                     </li> 
                     <li class="nav-item"> 
-                        <a class="nav-link" href="#">Book reviews</a> 
+                        <a class="nav-link" href="./bookreviews">Book reviews</a> 
                     </li> 
                     <li class="nav-item"> 
                         <a class="nav-link" href="#">Past events</a> 
