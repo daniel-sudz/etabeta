@@ -8,7 +8,7 @@ module.exports = {
             <div class="collapse navbar-collapse" id="navbarColor03"> 
                 <ul class="navbar-nav mr-auto"> 
                     <li class="nav-item active"> 
-                        <a class="nav-link" href="./calendar.html#">Calendar <span class="sr-only">(current)</span></a> 
+                        <a class="nav-link" href="./calendar.html#">Calendar </a> 
                     </li> 
                     <li class="nav-item"> 
                         <a class="nav-link" href="./history.html#">History</a> 
@@ -32,3 +32,6 @@ module.exports = {
             </div> 
         </nav> `
 }
+
+
+// <span class="sr-only">(current)</span>

@@ -19,6 +19,7 @@ require('./styles/daygrid/main.min.css');
 require('./styles/list/main.min.css');
 require('./styles/timegrid/main.min.css');
 require('./calendar.css');
+require('./styles/top_bar.css');
 
 window.mobilecheck = function() {
   var check = false;

@@ -6,7 +6,6 @@ const glob = require('glob')
 const path = require('path')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 
 const page_header = require('./src/resources/resources.js');
@@ -93,15 +92,15 @@ module.exports = {
             }
         }),
 
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-            Popper: ['popper.js', 'default'],
-            // In case you imported plugins individually, you must also require them here:
-            Util: "exports-loader?Util!bootstrap/js/dist/util",
-            Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
-        }),
+    //    new webpack.ProvidePlugin({
+    //        $: 'jquery',
+     //       jQuery: 'jquery',
+     //       'window.jQuery': 'jquery',
+     //       Popper: ['popper.js', 'default'],
+     //       // In case you imported plugins individually, you must also require them here:
+     //     Util: "exports-loader?Util!bootstrap/js/dist/util",
+      //      Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
+     //   }),
 
         //new BundleAnalyzerPlugin(),
     ]
