@@ -20,9 +20,6 @@ module.exports = {
                         <a class="nav-link" href="./book_reviews.html#">Book reviews</a> 
                     </li> 
                     <li class="nav-item"> 
-                        <a class="nav-link" href="#">Past events</a> 
-                    </li> 
-                    <li class="nav-item"> 
                         <a class="nav-link" href="./scholarships.html#">Scholarships</a> 
                     </li> 
                     <li class="nav-item"> 
@@ -35,3 +32,6 @@ module.exports = {
 
 
 // <span class="sr-only">(current)</span>
+//                    <li class="nav-item"> 
+//<a class="nav-link" href="#">Past events</a> 
+//</li> 
