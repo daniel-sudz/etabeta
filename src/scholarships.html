@@ -25,6 +25,18 @@
             margin: 20px 20px 20px 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
+
+        .center_img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and (min-aspect-ratio: 1/1) {
+            .image_size {
+                width: 30% !important
+            }
+        }
     </style>
 
 </head>
@@ -33,7 +45,7 @@
     <div class="container-fluid" style="max-width:95%;">
         <div class="top-bar">
             <h3 style="text-align:center; color: #fff;"> Scholorships </h3>
-          </div>
+        </div>
         <div class="outline_white">
             <p>
                 <strong>Scholarships</strong><br><br> A record 31 scholarships of $500.00 each were awarded to deserving
@@ -42,42 +54,17 @@
                 were distributed in a random drawing at a chapter meeting.
             </p>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="./pic/crop/conference.jpg">
-                            <img src="./pic/crop/conference.jpg" alt="test" style="width:100%">
-                        </a>
-                            <div class="caption">
-                                <p>Placeholder for images of scholorships</p>
-                            </div>
-                        
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="./pic/crop/conference.jpg">
-                            <img src="./pic/crop/conference.jpg" alt="test" style="width:100%">
-                        </a>
-                            <div class="caption">
-                                <p>Placeholder for images of scholorships</p>
-                            </div>
-                        
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="./pic/crop/conference.jpg">
-                            <img src="./pic/crop/conference.jpg" alt="test" style="width:100%">
-                        </a>
-                            <div class="caption">
-                                <p>Placeholder for images of scholorhips</p>
-                            </div>
-                        
-                    </div>
+            <div style="display: block; text-align: center;">
+                <a href="./pic/recipients.jpg">
+                    <img class="text-center image_size" src="./pic/recipients.jpg" alt="recipients" style="width:100%">
+                </a>
+                <div class="caption text-center">
+                    <p>Kris, Gretchen, and Betty with recipients.</p>
                 </div>
             </div>
+
         </div>
+    </div>
 </body>
 
 
