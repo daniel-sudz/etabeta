@@ -1,0 +1,35 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+    
+    # Run the actual build
+    - name: Build react folder
+      run: |
+        echo "build has started"
+        sh actions/entry.sh
+    
+    # Upload artifacts if needed for debug
+    - uses: actions/upload-artifact@v1
+      with:
+        name: site_build
+        path: build
+    
+    # Deploy to github pages branch
+    - name: Github Pages 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: build # The folder the action should deploy.
